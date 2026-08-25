@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+           background-color: aqua;
+           width: 300px;
+           padding: 10px 120px;
+           border: solid white 1px;
+           box-shadow: 2px 5px 8px grey;
+        }
+        .container button{
+            border: none;
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            width: 100%;
+            margin-bottom:20px;
+            box-shadow: 0px 2px 8px grey;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Online Shop</h1>
+        <h3>tea : 100</h3>
+        <h3>coffee : 200</h3>
+        <h3>atta : 500</h3>
+        <h3>chini : 800</h3>
+        <button onclick="cl()">Buy Now</button>
+    </div>
+    <div class="cart"></div>
+    
+</body>
+
+<script>
+    
+    const items = {
+        tea : 100 ,
+        coffee : 200 ,
+        atta : 600 ,
+        chini : 800
+    }
+    
+    let item;
+        
+    let quantity;
+     function cl(){
+        item = prompt("enter the item");
+        quantity = prompt("enter the quantity");
+            for(let x in items){
+            if(item == x){
+                document.write("item : " + x +"<br>" );
+                document.write("price per kg : " + items[x] +"<br>" );
+                
+                document.write("quantity : " + quantity  +"<br>");
+                
+                document.write("total amount to pay : "+ quantity * items[x]);
+            }
+        }
+
+     }
+     
+
+
+</script>
+</html>
