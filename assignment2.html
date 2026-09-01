@@ -1,0 +1,19 @@
+<script>
+    function user(username, password) {
+        return password;
+    }
+
+    function checkPassword(userFunction, enteredPassword) {
+        if (userFunction(username, password) === enteredPassword) {
+            document.write("password is correct");
+        } else {
+            document.write("incorrect password");
+        }
+    }
+
+    let username = prompt("Enter the username");
+    let password = prompt("Enter the password");
+    let check = prompt("Enter password");
+
+    checkPassword(user, check);
+</script>
